@@ -149,7 +149,7 @@ typedef enum {
     picoquic_frame_type_datagram = 0x30,
     picoquic_frame_type_datagram_l = 0x31,
     picoquic_frame_type_ack_frequency = 0xAF,
-    picoquic_frame_type_immediate_ack = 0xAC,
+    picoquic_frame_type_immediate_ack = 0x1F,
     picoquic_frame_type_time_stamp = 757,
     picoquic_frame_type_mp_ack = 0x15228c00,
     picoquic_frame_type_mp_ack_ecn =  0x15228c01,
