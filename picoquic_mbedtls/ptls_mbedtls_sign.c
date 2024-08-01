@@ -1321,9 +1321,8 @@ ptls_verify_certificate_t* ptls_mbedtls_get_certificate_verifier(char const* pem
             *is_cert_store_not_empty = 1;
             verifier = ptls_mbedssl_init_verify_certificate_complete(chain_head, NULL, NULL, NULL);
         }
-        else {
-
-            mbedtls_x509_crt_free(chain_head);
+        if (verifier == NULL) {
+            free(chain_head);
         }
     }
     return (verifier==NULL)?NULL:&verifier->super;
